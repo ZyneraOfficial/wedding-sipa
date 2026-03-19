@@ -2,11 +2,40 @@
 
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
+import { getGuestName } from "@/app/actions/rsvp";
 
 function DearContent() {
   const searchParams = useSearchParams();
   const to = searchParams.get("to");
+  const [displayName, setDisplayName] = useState(to || "Tamu Undangan");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchName() {
+      if (!to) {
+        setIsLoading(false);
+        return;
+      }
+
+      setIsLoading(true);
+      try {
+        const name = await getGuestName(to);
+        if (name) {
+          setDisplayName(name);
+        } else {
+          setDisplayName(to);
+        }
+      } catch (error) {
+        console.error("Failed to fetch guest name:", error);
+        setDisplayName(to);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchName();
+  }, [to]);
 
   return (
     <div className="w-full max-w-lg mx-auto mt-10 px-10">
@@ -58,10 +87,14 @@ function DearContent() {
             {/* Text overlay on paper */}
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <span className="font-script text-[#A87045] text-[20px] leading-tight">
-                Dear
+                Kepada Yth
               </span>
-              <span className="font-body text-[#4A3728] text-[14px] tracking-widest mt-1">
-                {to || "Tamu Undangan"}
+              <span className="font-body text-[#4A3728] text-[14px] tracking-widest mt-1 min-h-[1.5em] text-center px-4">
+                {isLoading ? (
+                  <span className="opacity-50 animate-pulse">Memuat...</span>
+                ) : (
+                  displayName
+                )}
               </span>
             </div>
           </div>

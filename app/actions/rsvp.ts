@@ -103,3 +103,29 @@ export async function getRSVPs(page: number = 1, limit: number = 5) {
     return { data: [], hasMore: false, total: 0 };
   }
 }
+
+export async function getGuestName(slug: string) {
+  if (!slug) return null;
+  
+  try {
+    const doc = await getDoc();
+    const sheet = doc.sheetsByTitle["Daftar Tamu"];
+    
+    if (!sheet) {
+      console.warn("Sheet 'Daftar Tamu' not found. Please create it.");
+      return null;
+    }
+
+    const rows = await sheet.getRows();
+    const guestRow = rows.find(row => row.get("Slug") === slug);
+    
+    if (guestRow) {
+      return guestRow.get("Nama") as string;
+    }
+
+    return null;
+  } catch (error) {
+    console.error("Error fetching guest name:", error);
+    return null;
+  }
+}
