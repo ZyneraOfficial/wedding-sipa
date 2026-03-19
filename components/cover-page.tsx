@@ -68,7 +68,8 @@ export default function CoverPage({ isRevealed, onOpen }: CoverPageProps) {
 
   return (
     <motion.section
-      className={`fixed inset-0 z-50 bg-[#778873] h-dvh w-full flex flex-col items-center pt-14 pb-0 px-6 overflow-hidden ${isRevealed ? "pointer-events-none" : ""}`}
+      className={`fixed inset-y-0 left-1/2 -translate-x-1/2 z-50 bg-[#778873] w-full max-w-md h-dvh flex flex-col items-center pt-16 pb-0 px-6 overflow-hidden shadow-2xl ${isRevealed ? "pointer-events-none" : ""
+        }`}
       initial="initial"
       animate={isRevealed ? "exit" : "animate"}
       variants={containerVariants}
@@ -84,14 +85,27 @@ export default function CoverPage({ isRevealed, onOpen }: CoverPageProps) {
       </motion.h1>
 
       {/* Photo Collage */}
-      <motion.div variants={itemVariants} className="w-full">
+      <motion.div variants={itemVariants} className="w-full md:w-8/9">
         <PhotoCollage isRevealed={isRevealed} />
       </motion.div>
 
       {/* Dear Section */}
-      <motion.div variants={itemVariants} className="w-full">
+      <motion.div variants={itemVariants} className="w-full md:w-8/9">
         <DearSection />
       </motion.div>
+
+      {/* Button Container */}
+      <div className="absolute bottom-[5%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-6 w-full z-20">
+        <motion.button
+          whileHover={{ scale: 1.05, backgroundColor: "#63412C" }}
+          whileTap={{ scale: 0.95 }}
+          onClick={onOpen}
+          className="px-8 py-3.5 bg-[#A87045] text-white font-serif tracking-[0.15em] text-xs shadow-2xl transition-all z-30 flex items-center gap-3 rounded-xl border border-white/20 uppercase font-bold"
+        >
+          <MailOpen className="w-4 h-4" />
+          Buka Undangan
+        </motion.button>
+      </div>
 
       <motion.div
         className="absolute w-[700px] h-[1000px] -bottom-160 select-none touch-none z-10"
@@ -113,20 +127,6 @@ export default function CoverPage({ isRevealed, onOpen }: CoverPageProps) {
           fill
           className="w-full object-cover rotate-[87.4deg] pointer-events-none"
         />
-
-
-        {/* Button Container */}
-        <div className="absolute bottom-[70%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-6 w-full z-20">
-          <motion.button
-            whileHover={{ scale: 1.05, backgroundColor: "#63412C" }}
-            whileTap={{ scale: 0.95 }}
-            onClick={onOpen}
-            className="px-8 py-3.5 bg-[#A87045] text-white font-serif tracking-[0.15em] text-xs shadow-2xl transition-all z-30 flex items-center gap-3 rounded-xl border border-white/20 uppercase font-bold"
-          >
-            <MailOpen className="w-4 h-4" />
-            Buka Undangan
-          </motion.button>
-        </div>
       </motion.div>
     </motion.section>
   );

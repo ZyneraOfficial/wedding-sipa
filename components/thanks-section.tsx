@@ -106,7 +106,7 @@ export default function ThanksSection() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.5 }}
-        className="relative w-full h-[250px] -mt-20 self-end pr-2 top-[20px]"
+        className="relative w-full h-[250px] -mt-20 self-end top-[20px] md:scale-110 md:top-0"
       >
         <Image
           src="/images/thanks-paper3.webp"
