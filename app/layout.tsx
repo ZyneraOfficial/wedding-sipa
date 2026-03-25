@@ -21,9 +21,29 @@ const courierPrime = Courier_Prime({
 });
 
 export const metadata: Metadata = {
-  title: "The Wedding of Dulfi & Syifa",
+  title: "The Wedding of Dulfi & Syifa | Sabtu, 4 April 2026",
   description:
-    "You are cordially invited to celebrate the wedding of Dulfi & Syifa",
+    "You are cordially invited to celebrate the wedding of Dulfi & Syifa on Saturday, April 4, 2026.",
+  authors: [{ name: "Zynera" }],
+  viewport: "width=device-width, initial-scale=1.0",
+  icons: {
+    icon: "images/favicon_io/favicon.ico",
+  },
+  openGraph: {
+    title: "The Wedding of Dulfi & Syifa",
+    description: "Sabtu, 4 April 2026",
+    url: "https://yourdomain.com",
+    siteName: "Wedding Invitation",
+    images: [
+      {
+        url: "images/cover.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

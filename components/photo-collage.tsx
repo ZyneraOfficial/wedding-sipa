@@ -37,7 +37,7 @@ export default function PhotoCollage({ isRevealed }: PhotoCollageProps) {
           className="absolute inset-0 z-10 shadow-xl rounded-sm"
         >
           <Image
-            src="/images/photo-with-effect.svg"
+            src="/images/cover-foto.png"
             alt="Dulfi & Syifa Cover"
             fill
             className="object-contain"

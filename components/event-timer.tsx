@@ -64,7 +64,13 @@ export default function EventTimer() {
       </div>
 
       {/* Timer Content */}
-      <div className="relative z-10 flex items-center justify-center w-full h-full px-[20%]">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-[20%] gap-4">
+
+        <p className="text-[20px] font-serif text-[#4A3728] tracking-wide text-center">
+          Sabtu, 4 April 2026
+        </p>
+
+        {/* COUNTER */}
         <div className="flex items-center justify-between w-full">
           <TimeUnit value={timeLeft.days} label="Days" />
           <Separator />
@@ -74,6 +80,7 @@ export default function EventTimer() {
           <Separator />
           <TimeUnit value={timeLeft.seconds} label="Seconds" />
         </div>
+
       </div>
     </div>
   );

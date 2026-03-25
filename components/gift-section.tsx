@@ -10,13 +10,13 @@ export default function GiftSection() {
   const accounts = [
     {
       bank: "Bank BCA",
-      number: "1234567890",
-      owner: "Dulfi",
+      number: "3790406647 ",
+      owner: "Dulfi Abdullah Fajar",
     },
     {
       bank: "Bank BCA",
-      number: "0987654321",
-      owner: "Syifa",
+      number: "8100907438",
+      owner: "Syifa Shintawati Nurazizah",
     },
   ];
 
@@ -47,7 +47,8 @@ export default function GiftSection() {
         viewport={{ once: true }}
         className="px-10 text-center font-courier text-[11px] md:text-[13px] mb-16 max-w-xl leading-relaxed"
       >
-        Kehadiran Bapa/Ibu/Saudara/i merupakan hadiah terindah. Namun, Apabila hendak memberikan ungkapan kasih kepada kami, dapat memalui .... di Bawah ini:
+        Kehadiran Bapak/Ibu/Saudara/i merupakan hadiah terindah bagi kami.
+        Namun, apabila ingin memberikan tanda kasih kepada kami, dapat disampaikan melalui pilihan di bawah ini.
       </motion.p>
 
       {/* Bank Section */}
@@ -104,10 +105,10 @@ export default function GiftSection() {
           />
         </div>
         <h3 className="font-courier text-[15px] mb-1">
-          Nama Lengkap
+          Syifa Shintawati Nurazizah
         </h3>
         <p className="font-courier text-[13px] text-[#8B8B8B] max-w-xs leading-relaxed">
-          Alamat Lengkap
+          Gg. Saluyu Selatan RT. 03 RW. 09 No. 61, Ds. Sayati, Kec. Margahayu, Kab. Bandung 40228
         </p>
       </motion.div>
     </section>

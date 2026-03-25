@@ -65,7 +65,7 @@ export default function ProfileCards() {
             >
               <div className="relative w-full h-full">
                 <Image
-                  src="/images/polaroid-foto1.webp"
+                  src="/images/polaroid-dulfi.png"
                   alt="Groom photo"
                   fill
                   className="object-cover"
@@ -82,10 +82,13 @@ export default function ProfileCards() {
               className="mt-[5%] text-center"
             >
               <h3 className="font-script text-[4.5vw] md:text-[20px] text-[#2A2A2A] leading-tight drop-shadow-sm">
-                Dulfi Dwi Juarso
+                Dulfi Abdullah Fajar
               </h3>
               <p className="font-courier text-[2.2vw] md:text-[10px] text-[#2A2A2A]/80 mt-[2%] px-8 tracking-wide">
-                Putra dari Bapak Nama Bapak & Ibu Nama Ibu
+                Putra dari Bapak Alin Suryana
+              </p>
+              <p className="font-courier text-[2.2vw] md:text-[10px] text-[#2A2A2A]/80 px-8 tracking-wide">
+                dan Ibu Nurlaeni
               </p>
             </motion.div>
           </div>
@@ -142,7 +145,7 @@ export default function ProfileCards() {
             >
               <div className="relative w-full h-full overflow-hidden">
                 <Image
-                  src="/images/polaroid-foto2.webp"
+                  src="/images/polaroid-syifa.png"
                   alt="Bride photo"
                   fill
                   className="object-cover"
@@ -158,11 +161,14 @@ export default function ProfileCards() {
               viewport={{ once: true }}
               className="mt-[5%] text-center"
             >
-              <h3 className="font-script text-[4.5vw] md:text-[20px] text-[#2A2A2A] leading-tight drop-shadow-sm">
-                Syifa Nabilah
+              <h3 className="font-script text-[4.5vw] md:text-[18px] text-[#2A2A2A] leading-tight drop-shadow-sm">
+                Syifa Shintawati Nurazizah, S.Kom
               </h3>
               <p className="font-courier text-[2.2vw] md:text-[10px] text-[#2A2A2A]/80 mt-[2%] px-8 tracking-wide">
-                Putri dari Bapak Nama Bapak & Ibu Nama Ibu
+                Putri dari Bapak  Achmad Agni Hotri
+              </p>
+               <p className="font-courier text-[2.2vw] md:text-[10px] text-[#2A2A2A]/80 px-8 tracking-wide">
+                dan Ibu Komalawati
               </p>
             </motion.div>
           </div>

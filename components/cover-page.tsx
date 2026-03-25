@@ -68,7 +68,7 @@ export default function CoverPage({ isRevealed, onOpen }: CoverPageProps) {
 
   return (
     <motion.section
-      className={`fixed inset-y-0 left-1/2 -translate-x-1/2 z-50 bg-[#778873] w-full max-w-md h-dvh flex flex-col items-center pt-16 pb-0 px-6 overflow-hidden shadow-2xl ${isRevealed ? "pointer-events-none" : ""
+      className={`fixed inset-y-0 left-1/2 -translate-x-1/2 z-50 bg-[#778873] w-full max-w-md h-dvh flex flex-col items-center pt-14 pb-0 px-6 overflow-hidden shadow-2xl ${isRevealed ? "pointer-events-none" : ""
         }`}
       initial="initial"
       animate={isRevealed ? "exit" : "animate"}
@@ -79,7 +79,7 @@ export default function CoverPage({ isRevealed, onOpen }: CoverPageProps) {
       {/* Title */}
       <motion.h1
         variants={titleVariants}
-        className="relative font-script text-[48px] font-bold leading-[100%] tracking-[0%] text-center text-white mb-14 drop-shadow-md"
+        className="relative font-script text-[48px] font-bold leading-[100%] tracking-[0%] text-center text-white md:mt-0 mt-10 md:mb-5 mb-10 drop-shadow-md"
       >
         The Wedding
       </motion.h1>
@@ -90,7 +90,7 @@ export default function CoverPage({ isRevealed, onOpen }: CoverPageProps) {
       </motion.div>
 
       {/* Dear Section */}
-      <motion.div variants={itemVariants} className="w-full md:w-8/9">
+      <motion.div variants={itemVariants} className="w-full md:w-6/9">
         <DearSection />
       </motion.div>
 
