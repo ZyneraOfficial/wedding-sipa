@@ -251,7 +251,12 @@ export default function RSVPSection() {
                 transition={{ delay: (index % 5) * 0.1 }}
                 className="w-full p-5 bg-white/60 backdrop-blur-sm rounded-2xl border border-brown-medium/20 shadow-sm relative overflow-hidden"
               >
-                <div className="font-bold text-brown-dark mb-1">{msg.nama} - {msg.konfirmasi}</div>
+                <div className="flex items-center gap-2 font-bold text-brown-dark mb-1">
+                  <span>{msg.nama}</span>
+                  <span className="text-sm text-brown-dark/80 italic">
+                    {msg.konfirmasi}
+                  </span>
+                </div>
                 <p className="text-sm text-brown-dark/80 italic leading-relaxed mb-3">
                   &ldquo;{msg.ucapan}&rdquo;
                 </p>
