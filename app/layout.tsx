@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Wedding of Dulfi & Syifa",
     description: "Sabtu, 4 April 2026",
-    url: "https://yourdomain.com",
+    url: "https://wedding-dulfi-syifa.vercel.app/",
     siteName: "Wedding Invitation",
     images: [
       {
