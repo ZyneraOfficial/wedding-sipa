@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   description:
     "You are cordially invited to celebrate the wedding of Dulfi & Syifa on Saturday, April 4, 2026.",
   authors: [{ name: "Zynera" }],
-  viewport: "width=device-width, initial-scale=1.0",
   icons: {
     icon: "images/favicon_io/favicon.ico",
   },
@@ -44,6 +43,11 @@ export const metadata: Metadata = {
     locale: "id_ID",
     type: "website",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
