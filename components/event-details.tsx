@@ -52,7 +52,7 @@ export default function EventDetails() {
               whileInView={{ scale: 1, rotate: -2 }}
               transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.8 }}
               viewport={{ once: true }}
-              className="absolute top-[5%] left-[23%] z-20 w-[60%] aspect-12/5"
+              className="absolute md:top-[5%] top-[15%] left-[23%] z-20 w-[60%] aspect-12/5"
             >
               <Image
                 src="/images/detail-event-right-date.webp"
@@ -60,7 +60,7 @@ export default function EventDetails() {
                 fill
                 className="object-contain"
               />
-              <span className="absolute inset-0 flex items-center justify-center font-courier text-[2.5vw] md:text-[12px] text-[#4A3728]">
+              <span className="absolute inset-0 flex items-center justify-center text-[15px] font-serif text-[#4A3728] tracking-wide md:text-[12px] text-[#4A3728]">
                 Sabtu, 4 April 2026
               </span>
             </motion.div>

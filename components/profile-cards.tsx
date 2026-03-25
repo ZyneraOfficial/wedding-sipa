@@ -161,7 +161,7 @@ export default function ProfileCards() {
               viewport={{ once: true }}
               className="mt-[5%] text-center"
             >
-              <h3 className="font-script text-[4.5vw] md:text-[18px] text-[#2A2A2A] leading-tight drop-shadow-sm">
+              <h3 className="font-script text-[4vw] md:text-[18px] text-[#2A2A2A] leading-tight drop-shadow-sm">
                 Syifa Shintawati Nurazizah, S.Kom
               </h3>
               <p className="font-courier text-[2.2vw] md:text-[10px] text-[#2A2A2A]/80 mt-[2%] px-8 tracking-wide">

@@ -23,6 +23,7 @@ interface RSVPMessage {
   timestamp: string;
   nama: string;
   ucapan: string;
+  konfirmasi: string;
 }
 
 export default function RSVPSection() {
@@ -64,7 +65,6 @@ export default function RSVPSection() {
     }
 
     setHasMore(more);
-    setIsLoading(true);
     setIsLoading(false);
     setIsLoadingMore(false);
   };
@@ -110,7 +110,7 @@ export default function RSVPSection() {
     <div className="relative z-10 w-full px-6 py-12 flex flex-col items-center">
       {/* Header */}
       <div className="text-center mb-10">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -119,7 +119,7 @@ export default function RSVPSection() {
         >
           Doa & Ucapan
         </motion.h2>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -251,7 +251,7 @@ export default function RSVPSection() {
                 transition={{ delay: (index % 5) * 0.1 }}
                 className="w-full p-5 bg-white/60 backdrop-blur-sm rounded-2xl border border-brown-medium/20 shadow-sm relative overflow-hidden"
               >
-                <div className="font-bold text-brown-dark mb-1">{msg.nama}</div>
+                <div className="font-bold text-brown-dark mb-1">{msg.nama} - {msg.konfirmasi}</div>
                 <p className="text-sm text-brown-dark/80 italic leading-relaxed mb-3">
                   &ldquo;{msg.ucapan}&rdquo;
                 </p>

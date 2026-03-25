@@ -99,7 +99,7 @@ export default function ThanksSection() {
 
             {/* Date */}
             <div className="absolute bottom-[10%] right-[10%] font-courier text-[12px] text-[#A87045] font-bold">
-              01/01/2026
+              04/04/2026
             </div>
           </motion.div>
         </div>

@@ -89,6 +89,7 @@ export async function getRSVPs(page: number = 1, limit: number = 5) {
         timestamp: row.get("Timestamp") as string,
         nama: row.get("Nama Tamu") as string,
         ucapan: row.get("Ucapan dan doa") as string,
+        konfirmasi: row.get("Konfirmasi Kehadiran") as string,
       }))
       .filter((r) => r.nama && r.ucapan)
       .reverse();
