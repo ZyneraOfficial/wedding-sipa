@@ -9,14 +9,16 @@ export default function GiftSection() {
 
   const accounts = [
     {
-      bank: "Bank BCA",
-      number: "3790406647 ",
+      bank: "Bank Mandiri",
+      number: "1320030000856 ",
       owner: "Dulfi Abdullah Fajar",
+      logos: ["/images/bmandiri.png"]
     },
     {
       bank: "Bank BCA",
       number: "8100907438",
       owner: "Syifa Shintawati Nurazizah",
+      logos: ["/images/bbca.svg"]
     },
   ];
 
@@ -29,7 +31,7 @@ export default function GiftSection() {
   return (
     <section className="relative w-full py-24 flex flex-col items-center mt-30 text-brown-dark">
       {/* Heading */}
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -40,7 +42,7 @@ export default function GiftSection() {
       </motion.h2>
 
       {/* Description */}
-      <motion.p 
+      <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.2 }}
@@ -54,7 +56,7 @@ export default function GiftSection() {
       {/* Bank Section */}
       <div className="flex items-center justify-center gap-5 mb-4">
         {accounts.map((acc, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,13 +64,17 @@ export default function GiftSection() {
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
-            <div className="w-32 h-10 relative mb-2">
-              <Image
-                src="/images/bca.webp"
-                alt="BCA Logo"
-                fill
-                className="object-contain"
-              />
+            <div className="flex gap-2 mb-2">
+              {acc.logos.map((logo, i) => (
+                <div key={i} className="w-32 h-12 relative">
+                  <Image
+                    src={logo}
+                    alt="Bank Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ))}
             </div>
             <p className="font-courier text-[11px] mb-1">
               a/n {acc.owner}
@@ -89,7 +95,7 @@ export default function GiftSection() {
       </div>
 
       {/* Physical Gift Section */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.8 }}
